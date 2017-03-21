@@ -57,7 +57,7 @@ action :disable do
   end
 end
 
-action_class do
+action_class.class_eval do
   def collect_args(resource_args = [])
     if resource_args.is_a? Array
       resource_args
