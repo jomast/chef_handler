@@ -16,19 +16,19 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
+# 
 
 actions :enable, :disable
 
 state_attrs :arguments,
             :class_name,
             :source,
-            :supports
+            :it_supports
 
 attribute :class_name, kind_of: String, name_attribute: true
 attribute :source, default: nil, kind_of: String
 attribute :arguments, default: []
-attribute :supports, kind_of: Hash, default: { report: true, exception: true }
+attribute :it_supports, kind_of: Hash, default: { report: true, exception: true }
 
 # we have to set default for the supports attribute
 # in initializer since it is a 'reserved' attribute name
